@@ -1,0 +1,62 @@
+{
+  "build": {
+    "beforeDevCommand": "pnpm dev",
+    "beforeBuildCommand": "pnpm build",
+    "devPath": "http://localhost:1420",
+    "distDir": "../dist",
+    "withGlobalTauri": false
+  },
+  "package": {
+    "productName": "pdfmerger",
+    "version": "0.0.1"
+  },
+  "tauri": {
+    "updater": {
+      "active": true,
+      "endpoints": [
+        "https://pastebin.com/raw/Tu4PVNPZ"
+      ],
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDFCNUFFMjEzM0EwNjg2MkIKUldRcmhnWTZFK0phRzdEUDdZZWlLcmpjSEp2ck40SGZnNGJERmlORUNmSEo4KzgwUzJqRmJGeFAK",
+      "dialog": true,
+      "windows": {
+        "installMode": "passive"
+      }
+    },
+    "allowlist": {
+      "all": false,
+      "shell": {
+        "all": false,
+        "open": true
+      },
+      "dialog": {
+        "open": true,
+        "save": true,
+        "message": true
+      }
+    },
+    "bundle": {
+      "active": true,
+      "targets": "all",
+      "identifier": "me.vert3xo",
+      "icon": [
+        "icons/32x32.png",
+        "icons/128x128.png",
+        "icons/128x128@2x.png",
+        "icons/icon.icns",
+        "icons/icon.ico"
+      ]
+    },
+    "security": {
+      "csp": null
+    },
+    "windows": [
+      {
+        "fullscreen": false,
+        "resizable": true,
+        "title": "PDF Merger",
+        "width": 800,
+        "height": 600
+      }
+    ]
+  }
+}
